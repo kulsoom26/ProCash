@@ -115,7 +115,7 @@ class EditSupplierCustomerScreen extends GetView<SettingsController> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8.r),
                           color: kRedButtonColor.withOpacity(0.3)),
-                      child: Center(
+                      child: const Center(
                         child: Icon(
                           Icons.delete,
                           color: kRedButtonColor,
@@ -136,7 +136,7 @@ class EditSupplierCustomerScreen extends GetView<SettingsController> {
               ),
               TextField(
                   controller: controller.name,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: 'Name',
                     enabledBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: kLabelColor),
@@ -155,7 +155,7 @@ class EditSupplierCustomerScreen extends GetView<SettingsController> {
               ),
               TextField(
                   controller: controller.telephone,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: 'Telephone',
                     enabledBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: kLabelColor),
@@ -166,7 +166,7 @@ class EditSupplierCustomerScreen extends GetView<SettingsController> {
                   ),
                   style: AppStyles.blackTextStyle()
                       .copyWith(fontSize: 16.sp, fontWeight: FontWeight.bold)),
-                      SizedBox(height: 10,),
+                      const SizedBox(height: 10,),
                       Text(
                 'Email',
                 style: AppStyles.greyTextStyle()
@@ -174,7 +174,7 @@ class EditSupplierCustomerScreen extends GetView<SettingsController> {
               ),
               TextField(
                   controller: controller.email,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: 'Email',
                     enabledBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: kLabelColor),
@@ -185,7 +185,7 @@ class EditSupplierCustomerScreen extends GetView<SettingsController> {
                   ),
                   style: AppStyles.blackTextStyle()
                       .copyWith(fontSize: 16.sp, fontWeight: FontWeight.bold)),
-                      SizedBox(height: 10,),
+                      const SizedBox(height: 10,),
                       Text(
                 'Address',
                 style: AppStyles.greyTextStyle()
@@ -193,7 +193,7 @@ class EditSupplierCustomerScreen extends GetView<SettingsController> {
               ),
               TextField(
                   controller: controller.address,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: 'Address',
                     enabledBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: kLabelColor),
@@ -204,7 +204,7 @@ class EditSupplierCustomerScreen extends GetView<SettingsController> {
                   ),
                   style: AppStyles.blackTextStyle()
                       .copyWith(fontSize: 16.sp, fontWeight: FontWeight.bold)),
-                      SizedBox(height: 10,),
+                      const SizedBox(height: 10,),
                       Text(
                 'Description',
                 style: AppStyles.greyTextStyle()
@@ -212,7 +212,7 @@ class EditSupplierCustomerScreen extends GetView<SettingsController> {
               ),
               TextField(
                   controller: controller.description,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: 'Description',
                     enabledBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: kLabelColor),
@@ -279,7 +279,7 @@ class EditSupplierCustomerScreen extends GetView<SettingsController> {
                             vertical: 12.h, horizontal: 20.w),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.r),
-                          side: BorderSide(color: Colors.black),
+                          side: const BorderSide(color: Colors.black),
                         ),
                       ),
                       onPressed: () {

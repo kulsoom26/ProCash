@@ -83,7 +83,7 @@ class TransactionFilterScreen extends GetView<TransactionFilterController> {
                 controller: controller.switchController6,
               ),
               SizedBox(height: 15.h),
-              DateRangePicker(),
+              const DateRangePicker(),
               SizedBox(height: 15.h),
               SwitchRow(
                 title: 'Location',

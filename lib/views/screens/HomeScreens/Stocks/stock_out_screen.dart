@@ -214,8 +214,8 @@ class StockOutScreen extends GetView<StockController> {
         data: ThemeData.light().copyWith(
           primaryColor: kGreenButtonColor,
           hintColor: kGreenButtonColor,
-          colorScheme: ColorScheme.light(primary: kGreenButtonColor),
-          buttonTheme: ButtonThemeData(textTheme: ButtonTextTheme.primary),
+          colorScheme: const ColorScheme.light(primary: kGreenButtonColor),
+          buttonTheme: const ButtonThemeData(textTheme: ButtonTextTheme.primary),
         ),
         child: child!,
       );
@@ -239,30 +239,30 @@ class StockOutScreen extends GetView<StockController> {
         ),
         contentPadding: EdgeInsets.zero,
         content: Container(
-          padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 15.0),
+          padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 15.0),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text(
+              const Text(
                 'Add Quantity',
                 style: TextStyle(
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 15.0),
+              const SizedBox(height: 15.0),
               Text(
                 controller.stockoutitem.text,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 15.0,
                 ),
               ),
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   IconButton(
-                    icon: Icon(Icons.remove, color: kPrimaryColor),
+                    icon: const Icon(Icons.remove, color: kPrimaryColor),
                     onPressed: () {
                       int currentQuantity = int.parse(controller.quantityStockOutController.text);
                       if (currentQuantity > 0) {
@@ -276,7 +276,7 @@ class StockOutScreen extends GetView<StockController> {
                       controller: controller.quantityStockOutController,
                       textAlign: TextAlign.center,
                       keyboardType: TextInputType.number,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         contentPadding: EdgeInsets.symmetric(vertical: 10.0),
                         border: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.green),
@@ -285,7 +285,7 @@ class StockOutScreen extends GetView<StockController> {
                     ),
                   ),
                   IconButton(
-                    icon: Icon(Icons.add, color: kPrimaryColor),
+                    icon: const Icon(Icons.add, color: kPrimaryColor),
                     onPressed: () {
                       int currentQuantity = int.parse(controller.quantityStockOutController.text);
                       controller.quantityStockOutController.text = (currentQuantity + 1).toString();
@@ -293,7 +293,7 @@ class StockOutScreen extends GetView<StockController> {
                   ),
                 ],
               ),
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
               Row(
                 children: [
                   Expanded(
@@ -301,25 +301,25 @@ class StockOutScreen extends GetView<StockController> {
                       style: ElevatedButton.styleFrom(
                         foregroundColor: Colors.black,
                         backgroundColor: Colors.white,
-                        padding: EdgeInsets.symmetric(vertical: 12.0),
+                        padding: const EdgeInsets.symmetric(vertical: 12.0),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0),
-                          side: BorderSide(color: Colors.black),
+                          side: const BorderSide(color: Colors.black),
                         ),
                       ),
                       onPressed: () {
                         Navigator.pop(context);
                       },
-                      child: Text('Cancel', style: TextStyle(fontSize: 18.0)),
+                      child: const Text('Cancel', style: TextStyle(fontSize: 18.0)),
                     ),
                   ),
-                  SizedBox(width: 10.0),
+                  const SizedBox(width: 10.0),
                   Expanded(
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         foregroundColor: Colors.white,
                         backgroundColor: kPrimaryColor,
-                        padding: EdgeInsets.symmetric(vertical: 12.0),
+                        padding: const EdgeInsets.symmetric(vertical: 12.0),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
@@ -364,7 +364,7 @@ class StockOutScreen extends GetView<StockController> {
                             }
                           }
                       },
-                      child: Text('OK', style: TextStyle(fontSize: 16.0)),
+                      child: const Text('OK', style: TextStyle(fontSize: 16.0)),
                     ),
                   ),
                 ],

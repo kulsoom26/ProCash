@@ -88,7 +88,7 @@ class SafetyAlertScreen extends GetView<SafetyStockController> {
   Widget _buildItemList(List<Item> items, Color textColor) {
     return ListView.builder(
       shrinkWrap: true,
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       itemCount: items.length,
       itemBuilder: (context, index) {
         final item = items[index];
@@ -111,7 +111,7 @@ class SafetyAlertScreen extends GetView<SafetyStockController> {
   }
 
   Widget _buildLocationDetails(Item item, Color textColor) {
-    if (item.locations == null || item.locations!.isEmpty) return SizedBox.shrink();
+    if (item.locations == null || item.locations!.isEmpty) return const SizedBox.shrink();
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,

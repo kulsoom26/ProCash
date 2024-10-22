@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:pro_cash_food/utils/app_colors.dart';
 import 'package:pro_cash_food/utils/app_images.dart';
 import 'package:pro_cash_food/utils/app_strings.dart';
 import 'package:pro_cash_food/utils/app_styles.dart';
-import 'package:pro_cash_food/views/custom_widgets/custom_button.dart';
 import 'package:pro_cash_food/views/custom_widgets/custom_scaffold.dart';
 import 'package:pro_cash_food/views/screens/InitiationScreens/createteam/controller/create_team_controller.dart';
 

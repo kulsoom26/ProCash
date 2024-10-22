@@ -70,7 +70,7 @@ class ItemsScreen extends GetView<ItemsController> {
         ),
         body: Obx(() {
           if (controller.isLoading.value) {
-            return Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           }
           final searchQuery = controller.search.value.toLowerCase();
           final filteredItems = controller.items.where((item) {
@@ -100,7 +100,7 @@ class ItemsScreen extends GetView<ItemsController> {
                   SizedBox(height: 25.h),
                   ListView.builder(
                     shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     itemCount: filteredItems.length,
                     itemBuilder: (context, index) {
                       final item = filteredItems[index];
@@ -131,13 +131,14 @@ class ItemsScreen extends GetView<ItemsController> {
                                       fit: BoxFit.cover,
                                       errorBuilder:
                                           (context, error, stackTrace) {
-                                        return Icon(Icons.error);
+                                        return const Icon(Icons.error);
                                       },
                                       loadingBuilder:
                                           (context, child, loadingProgress) {
-                                        if (loadingProgress == null)
+                                        if (loadingProgress == null) {
                                           return child;
-                                        return Center(
+                                        }
+                                        return const Center(
                                             child: CircularProgressIndicator());
                                       },
                                     ),

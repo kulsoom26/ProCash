@@ -172,7 +172,7 @@ class AgreementScreen extends StatelessWidget {
                           ),
                           Center(
                             child: Obx(
-                              ()=> controller.isLoading.isTrue? CircularProgressIndicator(color: kGreenButtonColor,) : CustomButton(
+                              ()=> controller.isLoading.isTrue? const CircularProgressIndicator(color: kGreenButtonColor,) : CustomButton(
                                 width: 390.w,
                                 height: 58.h,
                                 color: kGreenButtonColor,

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:pro_cash_food/utils/app_colors.dart';
 import 'package:pro_cash_food/views/custom_widgets/custom_scaffold.dart';

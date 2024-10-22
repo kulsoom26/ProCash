@@ -73,11 +73,11 @@ class AddNewRoleScreen extends GetView<SettingsController> {
                 ),
               ),
               SizedBox(height: 20.h),
-              Divider(color: kDividerColor),
+              const Divider(color: kDividerColor),
               SizedBox(height: 10.h),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.w),
-                child: Container(
+                child: SizedBox(
                   height: Get.height,
                   width: Get.width,
                   child: Column(
@@ -91,7 +91,7 @@ class AddNewRoleScreen extends GetView<SettingsController> {
                         ),
                         child: TabBar(
                           indicator: BoxDecoration(
-                            color: Color(0xFF7DEF00),
+                            color: const Color(0xFF7DEF00),
                             borderRadius: BorderRadius.circular(10.r),
                           ),
                           labelColor: Colors.white,
@@ -100,13 +100,13 @@ class AddNewRoleScreen extends GetView<SettingsController> {
                             SizedBox(
                               width: Get.width,
                               height: 55.h,
-                              child: Center(child: Text("Feature Access")),
+                              child: const Center(child: Text("Feature Access")),
                             ),
-                            Container(
+                            SizedBox(
                               width: Get.width,
                               height: 55.h,
                               child:
-                                  Center(child: Text("Item Attribute Access")),
+                                  const Center(child: Text("Item Attribute Access")),
                             ),
                           ],
                         ),

@@ -55,7 +55,7 @@ class SettingsScreen extends GetView<SettingsController> {
       ],
       body: Obx(
         () => controller.teamData.isEmpty
-            ? Center(child: CircularProgressIndicator())
+            ? const Center(child: CircularProgressIndicator())
             : SingleChildScrollView(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -349,7 +349,7 @@ class SettingsScreen extends GetView<SettingsController> {
                                     child: Row(
                                       mainAxisSize: MainAxisSize.min,
                                       children: [
-                                        Icon(
+                                        const Icon(
                                           Icons.add,
                                           size: 20,
                                           color: kPrimaryColor,
@@ -411,7 +411,7 @@ class SettingsScreen extends GetView<SettingsController> {
                                 onTap: () {
                                   Get.toNamed(kSettingsMyTeamsRoute);
                                 },
-                                child: CustomRow(
+                                child: const CustomRow(
                                   text: 'My Teams',
                                 ),
                               ),
@@ -429,7 +429,7 @@ class SettingsScreen extends GetView<SettingsController> {
                                     child: Row(
                                       mainAxisSize: MainAxisSize.min,
                                       children: [
-                                        Icon(
+                                        const Icon(
                                           Icons.add,
                                           size: 20,
                                           color: kPrimaryColor,
@@ -638,7 +638,7 @@ class SettingsScreen extends GetView<SettingsController> {
 
   void _showRenameModal(
       BuildContext context, TextEditingController controllerText) {
-    TextEditingController _renameController =
+    TextEditingController renameController =
         TextEditingController(text: controllerText.text);
 
     showDialog(
@@ -666,8 +666,8 @@ class SettingsScreen extends GetView<SettingsController> {
                     )),
                 SizedBox(height: 20.h),
                 TextField(
-                  controller: _renameController,
-                  decoration: InputDecoration(
+                  controller: renameController,
+                  decoration: const InputDecoration(
                     hintText: 'Input new name',
                     enabledBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: kPrimaryColor),
@@ -689,7 +689,7 @@ class SettingsScreen extends GetView<SettingsController> {
                               vertical: 12.h, horizontal: 20.w),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.r),
-                            side: BorderSide(color: Colors.black),
+                            side: const BorderSide(color: Colors.black),
                           ),
                         ),
                         onPressed: () {
@@ -713,7 +713,7 @@ class SettingsScreen extends GetView<SettingsController> {
                           ),
                         ),
                         onPressed: () {
-                          controllerText.text = _renameController.text;
+                          controllerText.text = renameController.text;
                           controller.updateTeamName();
                           Navigator.pop(context);
                         },
@@ -732,7 +732,7 @@ class SettingsScreen extends GetView<SettingsController> {
 
   void _showNoteModal(
       BuildContext context, TextEditingController controllerText) {
-    TextEditingController _renameController =
+    TextEditingController renameController =
         TextEditingController(text: controllerText.text);
 
     showDialog(
@@ -760,8 +760,8 @@ class SettingsScreen extends GetView<SettingsController> {
                     )),
                 SizedBox(height: 20.h),
                 TextField(
-                  controller: _renameController,
-                  decoration: InputDecoration(
+                  controller: renameController,
+                  decoration: const InputDecoration(
                     hintText: 'Input new note',
                     enabledBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: kPrimaryColor),
@@ -783,7 +783,7 @@ class SettingsScreen extends GetView<SettingsController> {
                               vertical: 12.h, horizontal: 20.w),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.r),
-                            side: BorderSide(color: Colors.black),
+                            side: const BorderSide(color: Colors.black),
                           ),
                         ),
                         onPressed: () {
@@ -807,7 +807,7 @@ class SettingsScreen extends GetView<SettingsController> {
                           ),
                         ),
                         onPressed: () {
-                          controllerText.text = _renameController.text;
+                          controllerText.text = renameController.text;
 
                           final newNote = Notes(
                               note: controllerText.text.trim(),

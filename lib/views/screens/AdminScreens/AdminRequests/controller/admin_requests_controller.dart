@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pro_cash_food/models/request_model.dart';
-import 'package:pro_cash_food/models/user_model.dart';
 import 'package:pro_cash_food/views/screens/AdminScreens/AdminHome/controller/admin_home_controller.dart';
 
 class AdminRequestController extends GetxController {

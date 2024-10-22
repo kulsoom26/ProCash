@@ -63,7 +63,7 @@ class CurrencyScreen extends GetView<SettingsController> {
                 child: Obx(() {
                   return ListView.separated(
                     itemCount: controller.currency.length,
-                    separatorBuilder: (context, index) => Divider(
+                    separatorBuilder: (context, index) => const Divider(
                       indent: 10,
                       endIndent: 10,
                     ),
@@ -83,7 +83,7 @@ class CurrencyScreen extends GetView<SettingsController> {
                             ),
                           ),
                           trailing: controller.selectedCurrency.value == currencyName
-                              ? Icon(
+                              ? const Icon(
                                   Icons.check,
                                   color: kPrimaryColor,
                                 )

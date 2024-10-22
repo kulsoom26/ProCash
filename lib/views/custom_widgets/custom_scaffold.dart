@@ -159,7 +159,7 @@ class _CustomScaffoldState extends State<CustomScaffold> {
               extendBodyBehindAppBar: true,
               bottomNavigationBar: widget.bottomNavigationBar != null
                   ? Container(child: widget.bottomNavigationBar)
-                  : Container(
+                  : SizedBox(
                       width: 0,
                       height: 0,
                     ),

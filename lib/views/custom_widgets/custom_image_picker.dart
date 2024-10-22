@@ -40,7 +40,7 @@ class _CustomProfileImagePickerState extends State<CustomProfileImagePicker> {
                 ),
               ),
               ListTile(
-                leading: Icon(
+                leading: const Icon(
                   Icons.camera,
                   color: kBlackButtonColor,
                 ),
@@ -56,7 +56,7 @@ class _CustomProfileImagePickerState extends State<CustomProfileImagePicker> {
                 },
               ),
               ListTile(
-                leading: Icon(
+                leading: const Icon(
                   Icons.photo_library,
                   color: kBlackButtonColor,
                 ),
@@ -93,7 +93,7 @@ class _CustomProfileImagePickerState extends State<CustomProfileImagePicker> {
                 border: Border.all(color: kWhiteButtonColor, width: 2),
               ),
               child: controller.isUploading.isTrue
-                  ? CircularProgressIndicator(
+                  ? const CircularProgressIndicator(
                       color: kPrimaryColor,
                     )
                   : controller.imagePath.value.isEmpty
@@ -125,8 +125,8 @@ class _CustomProfileImagePickerState extends State<CustomProfileImagePicker> {
                   width: 1.5
                 )
               ),
-              padding: EdgeInsets.all(6),
-              child: Icon(
+              padding: const EdgeInsets.all(6),
+              child: const Icon(
                 Icons.photo_camera,
                 color: kWhiteButtonColor,
                 size: 15,

@@ -37,7 +37,7 @@ class RegisterNewItemsScreen extends GetView<RegisterNewItemController> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              CustomProfileImagePicker(),
+              const CustomProfileImagePicker(),
               Obx(() => ToggleSwitch(
                     initialLabelIndex: controller.toggleIndex.value,
                     totalSwitches: 2,
@@ -136,7 +136,7 @@ class RegisterNewItemsScreen extends GetView<RegisterNewItemController> {
                       Center(
                         child: Obx(
                           () => controller.isLoading.isTrue
-                              ? CircularProgressIndicator(
+                              ? const CircularProgressIndicator(
                                   color: kGreenButtonColor,
                                 )
                               : CustomButton(
@@ -197,7 +197,7 @@ class RegisterNewItemsScreen extends GetView<RegisterNewItemController> {
                             ),
                           ],
                         );
-                      }).toList(),
+                      }),
                       Align(
                         alignment: Alignment.bottomRight,
                         child: Column(
@@ -286,7 +286,7 @@ class RegisterNewItemsScreen extends GetView<RegisterNewItemController> {
                             title: Text(attribute),
                             trailing: isSelected
                                 ? IconButton(
-                                    icon: Icon(Icons.remove_circle,
+                                    icon: const Icon(Icons.remove_circle,
                                         color: Colors.red),
                                     onPressed: () {
                                       setState(() {
@@ -295,7 +295,7 @@ class RegisterNewItemsScreen extends GetView<RegisterNewItemController> {
                                     },
                                   )
                                 : IconButton(
-                                    icon: Icon(Icons.add_circle,
+                                    icon: const Icon(Icons.add_circle,
                                         color: Colors.green),
                                     onPressed: () {
                                       setState(() {
@@ -310,7 +310,7 @@ class RegisterNewItemsScreen extends GetView<RegisterNewItemController> {
                     ),
                   ),
                   TextButton(
-                    child: Text('Done',
+                    child: const Text('Done',
                         style: TextStyle(color: kGreenButtonColor)),
                     onPressed: () {
                       Navigator.of(context).pop();
@@ -329,7 +329,7 @@ class RegisterNewItemsScreen extends GetView<RegisterNewItemController> {
 
   void _showRenameModal(
       BuildContext context, TextEditingController controller) {
-    TextEditingController _renameController =
+    TextEditingController renameController =
         TextEditingController(text: controller.text);
 
     showDialog(
@@ -357,8 +357,8 @@ class RegisterNewItemsScreen extends GetView<RegisterNewItemController> {
                     )),
                 SizedBox(height: 20.h),
                 TextField(
-                  controller: _renameController,
-                  decoration: InputDecoration(
+                  controller: renameController,
+                  decoration: const InputDecoration(
                     hintText: 'Input item barcode',
                     enabledBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: kPrimaryColor),
@@ -380,7 +380,7 @@ class RegisterNewItemsScreen extends GetView<RegisterNewItemController> {
                               vertical: 12.h, horizontal: 20.w),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.r),
-                            side: BorderSide(color: Colors.black),
+                            side: const BorderSide(color: Colors.black),
                           ),
                         ),
                         onPressed: () {
@@ -404,7 +404,7 @@ class RegisterNewItemsScreen extends GetView<RegisterNewItemController> {
                           ),
                         ),
                         onPressed: () {
-                          controller.text = _renameController.text;
+                          controller.text = renameController.text;
                           Navigator.pop(context);
                         },
                         child: Text('OK', style: TextStyle(fontSize: 16.sp)),
@@ -446,7 +446,7 @@ class RegisterNewItemsScreen extends GetView<RegisterNewItemController> {
             SizedBox(
               height: 20.h,
             ),
-            Divider(),
+            const Divider(),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: Container(
@@ -458,8 +458,8 @@ class RegisterNewItemsScreen extends GetView<RegisterNewItemController> {
                     kScanBarcode,
                     width: 35.w,
                   ),
-                  title: Text('Scan with Camera'),
-                  trailing: Icon(Icons.keyboard_arrow_right),
+                  title: const Text('Scan with Camera'),
+                  trailing: const Icon(Icons.keyboard_arrow_right),
                   onTap: () async {
                     final result = await Navigator.push(
                       context,
@@ -488,8 +488,8 @@ class RegisterNewItemsScreen extends GetView<RegisterNewItemController> {
                     kInputBarcode,
                     width: 35.w,
                   ),
-                  title: Text('Input Manually'),
-                  trailing: Icon(Icons.keyboard_arrow_right),
+                  title: const Text('Input Manually'),
+                  trailing: const Icon(Icons.keyboard_arrow_right),
                   onTap: () {
                     Navigator.pop(context);
                     _showRenameModal(context, controller.barcode);
@@ -511,8 +511,8 @@ class RegisterNewItemsScreen extends GetView<RegisterNewItemController> {
                     kGenerateBarcode,
                     width: 35.w,
                   ),
-                  title: Text('Generate Barcode'),
-                  trailing: Icon(Icons.keyboard_arrow_right),
+                  title: const Text('Generate Barcode'),
+                  trailing: const Icon(Icons.keyboard_arrow_right),
                   onTap: () {
                     final barcode = controller.generateRandomBarcode();
                     controller.barcode.text = barcode;
@@ -594,7 +594,7 @@ class _CustomProfileImagePickerState extends State<CustomProfileImagePicker> {
                   ),
                 ),
                 SizedBox(height: 10.h),
-                Container(
+                SizedBox(
                   width: Get.width,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -603,7 +603,7 @@ class _CustomProfileImagePickerState extends State<CustomProfileImagePicker> {
                       padding: EdgeInsets.symmetric(vertical: 15.h),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.r),
-                        side: BorderSide(color: Colors.black),
+                        side: const BorderSide(color: Colors.black),
                       ),
                     ),
                     onPressed: () {
@@ -628,7 +628,7 @@ class _CustomProfileImagePickerState extends State<CustomProfileImagePicker> {
     return Center(
       child: Obx(
         () => controller.isUploading.isTrue
-            ? CircularProgressIndicator(
+            ? const CircularProgressIndicator(
                 color: kPrimaryColor,
               )
             : controller.imagePath.value.isEmpty

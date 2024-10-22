@@ -4,7 +4,7 @@ import 'package:pro_cash_food/utils/app_colors.dart';
 import 'package:pro_cash_food/utils/app_styles.dart';
 
 class SuccessAlert extends StatelessWidget {
-  const SuccessAlert({Key? key}) : super(key: key);
+  const SuccessAlert({super.key});
 
   @override
   Widget build(BuildContext context) {

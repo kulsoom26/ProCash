@@ -72,13 +72,13 @@ class MembersScreen extends GetView<SettingsController> {
             SizedBox(
               height: 10.h,
             ),
-            Container(
+            SizedBox(
               width: Get.width,
               height: Get.height * 0.71,
               child: Obx(() {
                 return ListView.separated(
                   itemCount: controller.existingMembers.length,
-                  separatorBuilder: (context, index) => Divider(
+                  separatorBuilder: (context, index) => const Divider(
                     indent: 10,
                     endIndent: 10,
                   ),
@@ -112,7 +112,7 @@ class MembersScreen extends GetView<SettingsController> {
                           onTap: () {
                             _showEditModal(context, controller.existingMembers[index]['id'], );
                           },
-                          child: Icon(
+                          child: const Icon(
                             Icons.keyboard_arrow_right,
                             color: kBlackTextColor,
                           ),
@@ -166,7 +166,7 @@ class MembersScreen extends GetView<SettingsController> {
                   ),
                 ),
                 SizedBox(height: 10.h),
-                Container(
+                SizedBox(
                   width: Get.width,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -175,7 +175,7 @@ class MembersScreen extends GetView<SettingsController> {
                       padding: EdgeInsets.symmetric(vertical: 15.h),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.r),
-                        side: BorderSide(color: Colors.black),
+                        side: const BorderSide(color: Colors.black),
                       ),
                     ),
                     onPressed: () {
@@ -238,7 +238,7 @@ class MembersScreen extends GetView<SettingsController> {
                           padding: EdgeInsets.symmetric(vertical: 12.h),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.r),
-                            side: BorderSide(color: Colors.black),
+                            side: const BorderSide(color: Colors.black),
                           ),
                         ),
                         onPressed: () {

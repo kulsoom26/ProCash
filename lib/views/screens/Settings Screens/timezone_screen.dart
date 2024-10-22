@@ -63,7 +63,7 @@ class TimezoneScreen extends GetView<SettingsController> {
                 child: Obx(() {
                   return ListView.separated(
                     itemCount: controller.timezones.length,
-                    separatorBuilder: (context, index) => Divider(indent: 20, endIndent: 20,),
+                    separatorBuilder: (context, index) => const Divider(indent: 20, endIndent: 20,),
                     itemBuilder: (context, index) {
                       return Obx(
                         () => RadioListTile<String>(

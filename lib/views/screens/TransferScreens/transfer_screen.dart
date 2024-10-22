@@ -205,7 +205,7 @@ class TransferScreen extends GetView<TransferScreenController> {
                                     ),
                                   if (request.type == 'Adjust')
                                     Text(
-                                      '${request.note ?? ''}',
+                                      request.note ?? '',
                                       style:
                                           AppStyles.blackTextStyle().copyWith(
                                         fontSize: 13.sp,

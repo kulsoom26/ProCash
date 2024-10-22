@@ -1,6 +1,4 @@
 import 'attributes_model.dart';
-import 'customers_model.dart';
-import 'suppliers_model.dart';
 
 class Team {
   String? id;

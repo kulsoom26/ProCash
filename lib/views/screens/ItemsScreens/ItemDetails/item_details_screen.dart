@@ -69,11 +69,11 @@ class ItemDetailsScreen extends GetView<ItemDetailsController> {
                                       height: 60.h,
                                       fit: BoxFit.cover,
                                       errorBuilder: (context, error, stackTrace) {
-                                        return Icon(Icons.error);
+                                        return const Icon(Icons.error);
                                       },
                                       loadingBuilder: (context, child, loadingProgress) {
                                         if (loadingProgress == null) return child;
-                                        return Center(child: CircularProgressIndicator());
+                                        return const Center(child: CircularProgressIndicator());
                                       },
                                     ),
                                   ),

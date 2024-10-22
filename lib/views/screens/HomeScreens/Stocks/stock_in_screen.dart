@@ -260,7 +260,7 @@ class StockInScreen extends GetView<StockController> {
                 const SizedBox(height: 15.0),
                 Text(
                   controller.stockinitem.text,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 15.0,
                   ),
                 ),

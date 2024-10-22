@@ -35,7 +35,7 @@ class CustomSearchBar extends StatelessWidget {
           decoration: InputDecoration(
             icon: Padding(
               padding: EdgeInsets.only(left: 25.w),
-              child: Icon(Icons.search, color: kGreyTextColor, size: 30),
+              child: const Icon(Icons.search, color: kGreyTextColor, size: 30),
             ),
             hintText: hintText,
             border: InputBorder.none,

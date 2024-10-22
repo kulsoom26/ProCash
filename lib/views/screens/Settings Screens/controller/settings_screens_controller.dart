@@ -122,23 +122,17 @@ class SettingsController extends GetxController {
   Future<void> updateTeamName() async {
     try {
       String teamId = GetStorage().read('teamId');
-      if (teamId != null) {
-        await FirebaseFirestore.instance
-            .collection('teams')
-            .doc(teamId)
-            .update({
-          'name': changeTeamName.text.trim(),
-        });
-        fetchTeamData();
-        Get.snackbar('Updated successfully!', 'Team name updated successfully');
-        changeTeamName.text = '';
-        print('Team name updated successfully');
-      } else {
-        Get.snackbar('Error!', 'Team ID not found');
-        changeTeamName.text = '';
-        print('Team ID not found');
-      }
-    } catch (e) {
+      await FirebaseFirestore.instance
+          .collection('teams')
+          .doc(teamId)
+          .update({
+        'name': changeTeamName.text.trim(),
+      });
+      fetchTeamData();
+      Get.snackbar('Updated successfully!', 'Team name updated successfully');
+      changeTeamName.text = '';
+      print('Team name updated successfully');
+        } catch (e) {
       changeTeamName.text = '';
       print('Error updating team name: $e');
     }
@@ -378,8 +372,8 @@ class SettingsController extends GetxController {
           .collection('teams')
           .where('members', arrayContains: userId)
           .get();
-      final allTeamDocs = <DocumentSnapshot>[]
-        ..addAll(teamsSnapshot.docs)
+      final allTeamDocs = <DocumentSnapshot>[...teamsSnapshot.docs]
+        
         ..addAll(memberTeamsSnapshot.docs);
 
       final List<Map<String, dynamic>> teamsDetails = [];
@@ -402,7 +396,7 @@ class SettingsController extends GetxController {
         int totalQuantity = 0;
         if (itemsSnapshot.docs.isNotEmpty) {
           for (var doc in itemsSnapshot.docs) {
-            final itemData = doc.data() as Map<String, dynamic>;
+            final itemData = doc.data();
             final itemQuantity = itemData['quantity'] ?? 0;
             totalQuantity += (itemQuantity as num).toInt();
           }
@@ -939,16 +933,16 @@ class SettingsController extends GetxController {
   RxBool isUploading = false.obs;
 
   Future<void> getImageGallery() async {
-    final ImagePicker _picker = ImagePicker();
-    final XFile? image = await _picker.pickImage(source: ImageSource.gallery);
+    final ImagePicker picker = ImagePicker();
+    final XFile? image = await picker.pickImage(source: ImageSource.gallery);
     if (image != null) {
       await uploadImage(File(image.path));
     }
   }
 
   Future<void> getImageCamera() async {
-    final ImagePicker _picker = ImagePicker();
-    final XFile? image = await _picker.pickImage(source: ImageSource.camera);
+    final ImagePicker picker = ImagePicker();
+    final XFile? image = await picker.pickImage(source: ImageSource.camera);
     if (image != null) {
       await uploadImage(File(image.path));
     }

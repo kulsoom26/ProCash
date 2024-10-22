@@ -30,7 +30,7 @@ class HomeController extends GetxController {
 
   void updateDate() {
     DateTime now = DateTime.now();
-    DateTime dateToShow = isToday.value ? now : now.subtract(Duration(days: 1));
+    DateTime dateToShow = isToday.value ? now : now.subtract(const Duration(days: 1));
     date.value = DateFormat('MMM dd').format(dateToShow);
   }
 
@@ -91,7 +91,7 @@ class HomeController extends GetxController {
       DateTime now = DateTime.now();
       String today = DateFormat('MMM d, yyyy').format(now);
       String yesterday =
-          DateFormat('MMM d, yyyy').format(now.subtract(Duration(days: 1)));
+          DateFormat('MMM d, yyyy').format(now.subtract(const Duration(days: 1)));
       print(today);
       print(yesterday);
 

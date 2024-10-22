@@ -90,7 +90,7 @@ class AddLocationScreen extends GetView<SettingsController> {
                 hint: 'Enter Name',
                 controller: controller.locationName,
                 isEditable: false,
-                isSuffix: Icon(Icons.keyboard_arrow_right, color: kGreyButtonColor,),
+                isSuffix: const Icon(Icons.keyboard_arrow_right, color: kGreyButtonColor,),
               ),
                 SizedBox(height: 28.h,),
                 GestureDetector(
@@ -182,7 +182,7 @@ class AddLocationScreen extends GetView<SettingsController> {
                   ),
                 ),
                 SizedBox(height: 10.h),
-                Container(
+                SizedBox(
                   width: Get.width,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -191,7 +191,7 @@ class AddLocationScreen extends GetView<SettingsController> {
                       padding: EdgeInsets.symmetric(vertical: 15.h),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.r),
-                        side: BorderSide(color: Colors.black),
+                        side: const BorderSide(color: Colors.black),
                       ),
                     ),
                     onPressed: () {

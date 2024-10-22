@@ -15,7 +15,7 @@ class CustomisedSimpleBarcodeScannerPage extends StatelessWidget {
   final bool? centerTitle;
 
   CustomisedSimpleBarcodeScannerPage({
-    Key? key,
+    super.key,
     this.lineColor = "#ff6666",
     this.cancelButtonText = "Cancel",
     this.isShowFlashIcon = false,
@@ -23,7 +23,7 @@ class CustomisedSimpleBarcodeScannerPage extends StatelessWidget {
     this.appBarTitle,
     this.centerTitle,
     required this.result,
-  }) : super(key: key);
+  });
 
   final HomeController barcodeController = Get.put(HomeController());
 

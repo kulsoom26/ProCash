@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:pro_cash_food/utils/app_colors.dart';
 import 'package:pro_cash_food/utils/app_images.dart';
 import 'package:pro_cash_food/utils/app_styles.dart';
@@ -9,7 +8,6 @@ import 'package:pro_cash_food/views/custom_widgets/custom_button.dart';
 import 'package:pro_cash_food/views/custom_widgets/custom_scaffold.dart';
 import 'package:pro_cash_food/views/custom_widgets/custom_text_field.dart';
 import 'package:pro_cash_food/views/screens/HomeScreens/Stocks/controller/stock_controller.dart';
-import 'package:simple_barcode_scanner/simple_barcode_scanner.dart';
 import 'package:intl/intl.dart';
 
 import '../../../../utils/app_strings.dart';

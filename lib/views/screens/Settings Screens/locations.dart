@@ -30,8 +30,8 @@ class LocationScreen extends GetView<SettingsController> {
           Get.toNamed(kSettingsLocationAddRoute);
           
         },
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
+        child: const Padding(
+          padding: EdgeInsets.all(8.0),
           child: CircleAvatar(
             backgroundColor: kPrimaryColor,
             radius: 25,
@@ -61,13 +61,13 @@ class LocationScreen extends GetView<SettingsController> {
             SizedBox(
               height: 10.h,
             ),
-            Container(
+            SizedBox(
               width: Get.width,
               height: Get.height,
               child: Obx(() {
                 return ListView.separated(
                   shrinkWrap: true,
-                  physics: AlwaysScrollableScrollPhysics(),
+                  physics: const AlwaysScrollableScrollPhysics(),
                   itemCount: controller.locations.length,
                   separatorBuilder: (context, index) => SizedBox(
                     height: 10.h,
@@ -105,13 +105,13 @@ class LocationScreen extends GetView<SettingsController> {
                                 style: AppStyles.blackTextStyle().copyWith(
                                     fontSize: 17.sp, fontWeight: FontWeight.bold),
                               ),
-                              Spacer(),
+                              const Spacer(),
                               
                               GestureDetector(
                                 onTap: (){
                                   _showDeleteConfirmationModal(context, data['name'], controller, index);
                                 },
-                                child: Icon(Icons.delete, color: kRedButtonColor, size: 25,)),
+                                child: const Icon(Icons.delete, color: kRedButtonColor, size: 25,)),
 
                               
                             ],
@@ -179,7 +179,7 @@ class LocationScreen extends GetView<SettingsController> {
                             vertical: 12.h, horizontal: 20.w),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.r),
-                          side: BorderSide(color: Colors.black),
+                          side: const BorderSide(color: Colors.black),
                         ),
                       ),
                       onPressed: () {

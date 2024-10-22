@@ -4,7 +4,7 @@ import 'package:pro_cash_food/utils/app_colors.dart';
 import 'package:pro_cash_food/utils/app_styles.dart';
 
 class UploadExcelAlert extends StatelessWidget {
-  const UploadExcelAlert({Key? key}) : super(key: key);
+  const UploadExcelAlert({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +47,7 @@ class UploadExcelAlert extends StatelessWidget {
                       padding: EdgeInsets.symmetric(vertical: 12.h),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.r),
-                        side: BorderSide(color: Colors.black),
+                        side: const BorderSide(color: Colors.black),
                       ),
                     ),
                     onPressed: () {

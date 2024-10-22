@@ -38,7 +38,7 @@ class MyTeamsScreen extends GetView<SettingsController> {
                 borderRadius: BorderRadius.circular(8.r),
                 color: kPrimaryColor.withOpacity(0.2),
               ),
-              child: Center(
+              child: const Center(
                 child: Icon(
                   Icons.add,
                   color: kPrimaryColor,
@@ -84,7 +84,7 @@ class MyTeamsScreen extends GetView<SettingsController> {
                               height: 150.h,
                               fit: BoxFit.cover,
                               errorBuilder: (context, error, stackTrace) =>
-                                  Icon(Icons.error, color: Colors.red),
+                                  const Icon(Icons.error, color: Colors.red),
                             ),
                           ),
                           SizedBox(width: 10.w),

@@ -38,7 +38,7 @@ class SettingsItemsScreen extends GetView<SettingsController> {
                   borderRadius: BorderRadius.circular(8.r),
                   color: kPrimaryColor.withOpacity(0.2),
                 ),
-                child: Center(
+                child: const Center(
                   child: Icon(
                     Icons.add,
                     color: kPrimaryColor,
@@ -52,7 +52,7 @@ class SettingsItemsScreen extends GetView<SettingsController> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
+            SizedBox(
               width: Get.width,
               height: Get.height,
               child: Obx(() {
@@ -78,7 +78,7 @@ class SettingsItemsScreen extends GetView<SettingsController> {
                               style: AppStyles.blackTextStyle()
                                   .copyWith(fontSize: 15.sp),
                             ),
-                            Spacer(),
+                            const Spacer(),
                             Text(
                               data['type'],
                               style: AppStyles.greenTextStyle()
@@ -163,7 +163,7 @@ class SettingsItemsScreen extends GetView<SettingsController> {
                   ),
                 ),
                 SizedBox(height: 10.h),
-                Container(
+                SizedBox(
                   width: Get.width,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -172,7 +172,7 @@ class SettingsItemsScreen extends GetView<SettingsController> {
                       padding: EdgeInsets.symmetric(vertical: 15.h),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.r),
-                        side: BorderSide(color: Colors.black),
+                        side: const BorderSide(color: Colors.black),
                       ),
                     ),
                     onPressed: () {
@@ -191,7 +191,7 @@ class SettingsItemsScreen extends GetView<SettingsController> {
   }
 
   void _showRenameModal(BuildContext context, Map<String, dynamic> data) {
-    TextEditingController _renameController =
+    TextEditingController renameController =
         TextEditingController(text: data['name']);
     showDialog(
       context: context,
@@ -218,8 +218,8 @@ class SettingsItemsScreen extends GetView<SettingsController> {
                     )),
                 SizedBox(height: 20.h),
                 TextField(
-                  controller: _renameController,
-                  decoration: InputDecoration(
+                  controller: renameController,
+                  decoration: const InputDecoration(
                     hintText: 'Input new name',
                     enabledBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: kPrimaryColor),
@@ -240,7 +240,7 @@ class SettingsItemsScreen extends GetView<SettingsController> {
           padding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 20.w),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.r),
-            side: BorderSide(color: Colors.black),
+            side: const BorderSide(color: Colors.black),
           ),
         ),
         onPressed: () {
@@ -261,7 +261,7 @@ class SettingsItemsScreen extends GetView<SettingsController> {
           ),
         ),
         onPressed: () {
-          String newName = _renameController.text;
+          String newName = renameController.text;
           if (newName.isNotEmpty) {
             controller.renameAttribute(data, newName);
           }
@@ -331,7 +331,7 @@ class SettingsItemsScreen extends GetView<SettingsController> {
                             vertical: 12.h, horizontal: 20.w),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.r),
-                          side: BorderSide(color: Colors.black),
+                          side: const BorderSide(color: Colors.black),
                         ),
                       ),
                       onPressed: () {

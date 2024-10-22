@@ -88,7 +88,7 @@ class CustomTextField extends StatelessWidget {
                 height: 0,
               ),
             ),
-            labelText: labeltext ?? null,
+            labelText: labeltext,
             labelStyle: labeltext != null
                 ? GoogleFonts.inter(
                     textStyle: TextStyle(

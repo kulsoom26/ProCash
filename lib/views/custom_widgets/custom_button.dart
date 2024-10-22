@@ -51,7 +51,7 @@ class CustomButton extends StatelessWidget {
                   BoxShadow(
                     color: shadowColor!,
                     blurRadius: shadowBlurRadius ?? 10.0,
-                    offset: shadowOffset ?? Offset(0, 4),
+                    offset: shadowOffset ?? const Offset(0, 4),
                   ),
                 ]
               : null,

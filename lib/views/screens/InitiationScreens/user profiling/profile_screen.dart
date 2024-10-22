@@ -56,7 +56,7 @@ class ProfileScreen extends GetView<ProfileController> {
                 ),
               ),
               SizedBox(height: 40.h),
-              CustomProfileImagePicker(),
+              const CustomProfileImagePicker(),
              
               SizedBox(height: 50.h),
               CustomTextField(
@@ -166,7 +166,7 @@ class _CustomProfileImagePickerState extends State<CustomProfileImagePicker> {
                   ),
                 ),
                 SizedBox(height: 10.h),
-                Container(
+                SizedBox(
                   width: Get.width,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -175,7 +175,7 @@ class _CustomProfileImagePickerState extends State<CustomProfileImagePicker> {
                       padding: EdgeInsets.symmetric(vertical: 15.h),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.r),
-                        side: BorderSide(color: Colors.black),
+                        side: const BorderSide(color: Colors.black),
                       ),
                     ),
                     onPressed: () {
@@ -208,7 +208,7 @@ class _CustomProfileImagePickerState extends State<CustomProfileImagePicker> {
                 border: Border.all(color: kWhiteButtonColor, width: 2),
               ),
               child: controller.isUploading.isTrue
-                  ? CircularProgressIndicator(
+                  ? const CircularProgressIndicator(
                       color: kPrimaryColor,
                     )
                   : controller.imagePath.value.isEmpty
@@ -240,8 +240,8 @@ class _CustomProfileImagePickerState extends State<CustomProfileImagePicker> {
                   width: 1.5
                 )
               ),
-              padding: EdgeInsets.all(6),
-              child: Icon(
+              padding: const EdgeInsets.all(6),
+              child: const Icon(
                 Icons.photo_camera,
                 color: kWhiteButtonColor,
                 size: 15,

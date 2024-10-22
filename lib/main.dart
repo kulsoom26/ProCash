@@ -65,9 +65,9 @@ class MyApp extends StatelessWidget {
             builder: (context, child) {
               return MediaQuery(
                   data: MediaQuery.of(context).copyWith(
-                      textScaleFactor: MediaQuery.of(context)
+                      textScaler: TextScaler.linear(MediaQuery.of(context)
                           .textScaleFactor
-                          .clamp(1.0, 1.0)),
+                          .clamp(1.0, 1.0))),
                   child: child!);
             });
       },

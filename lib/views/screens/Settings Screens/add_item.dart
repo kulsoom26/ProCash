@@ -69,7 +69,7 @@ class AddItemScreen extends GetView<SettingsController> {
                   hint: 'Input Attribute Name',
                   controller: controller.attributeName,
                   isEditable: false,
-                  isSuffix: Icon(Icons.keyboard_arrow_right, color: kGreyButtonColor,),
+                  isSuffix: const Icon(Icons.keyboard_arrow_right, color: kGreyButtonColor,),
                 ),
               ),
               SizedBox(height: 28.h,),
@@ -86,7 +86,7 @@ class AddItemScreen extends GetView<SettingsController> {
                       onTap: (){
                   _showEditModal(context, controller.attributeType);
                 },
-                      child: Icon(Icons.keyboard_arrow_down, color: kGreyButtonColor,)),
+                      child: const Icon(Icons.keyboard_arrow_down, color: kGreyButtonColor,)),
                   ),
                 ),
               ),
@@ -168,7 +168,7 @@ class AddItemScreen extends GetView<SettingsController> {
                   ),
                 ),
                 SizedBox(height: 10.h),
-                Container(
+                SizedBox(
                   width: Get.width,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -177,7 +177,7 @@ class AddItemScreen extends GetView<SettingsController> {
                       padding: EdgeInsets.symmetric(vertical: 15.h),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.r),
-                        side: BorderSide(color: Colors.black),
+                        side: const BorderSide(color: Colors.black),
                       ),
                     ),
                     onPressed: () {

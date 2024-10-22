@@ -438,7 +438,7 @@ class EditItemsScreen extends GetView<EditItemsController> {
                   ),
                 ),
                 SizedBox(height: 10.h),
-                Container(
+                SizedBox(
                   width: Get.width,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -447,7 +447,7 @@ class EditItemsScreen extends GetView<EditItemsController> {
                       padding: EdgeInsets.symmetric(vertical: 15.h),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.r),
-                        side: BorderSide(color: Colors.black),
+                        side: const BorderSide(color: Colors.black),
                       ),
                     ),
                     onPressed: () {
@@ -510,7 +510,7 @@ class EditItemsScreen extends GetView<EditItemsController> {
                           padding: EdgeInsets.symmetric(vertical: 12.h),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.r),
-                            side: BorderSide(color: Colors.black),
+                            side: const BorderSide(color: Colors.black),
                           ),
                         ),
                         onPressed: () {
@@ -596,7 +596,7 @@ class EditItemsScreen extends GetView<EditItemsController> {
                         onTap: () {
                           Get.back();
                         },
-                        child: Icon(Icons.close),
+                        child: const Icon(Icons.close),
                       ),
                     ],
                   ),
@@ -606,7 +606,7 @@ class EditItemsScreen extends GetView<EditItemsController> {
                     decoration: InputDecoration(
                       labelText: 'Name',
                       labelStyle: AppStyles.greenTextStyle(),
-                      border: OutlineInputBorder(
+                      border: const OutlineInputBorder(
                         borderSide: BorderSide(color: kGreenContainerColor),
                       ),
                     ),
@@ -617,7 +617,7 @@ class EditItemsScreen extends GetView<EditItemsController> {
                     decoration: InputDecoration(
                       labelText: 'Price',
                       labelStyle: AppStyles.greenTextStyle(),
-                      border: OutlineInputBorder(
+                      border: const OutlineInputBorder(
                         borderSide: BorderSide(color: kGreenContainerColor),
                       ),
                     ),
@@ -629,7 +629,7 @@ class EditItemsScreen extends GetView<EditItemsController> {
                     decoration: InputDecoration(
                       labelText: 'Cost',
                       labelStyle: AppStyles.greenTextStyle(),
-                      border: OutlineInputBorder(
+                      border: const OutlineInputBorder(
                         borderSide: BorderSide(color: kGreenContainerColor),
                       ),
                     ),
@@ -641,7 +641,7 @@ class EditItemsScreen extends GetView<EditItemsController> {
                     decoration: InputDecoration(
                       labelText: 'Quantity',
                       labelStyle: AppStyles.greenTextStyle(),
-                      border: OutlineInputBorder(
+                      border: const OutlineInputBorder(
                         borderSide: BorderSide(color: kGreenContainerColor),
                       ),
                     ),
@@ -653,7 +653,7 @@ class EditItemsScreen extends GetView<EditItemsController> {
                     decoration: InputDecoration(
                       labelText: 'Barcode',
                       labelStyle: AppStyles.greenTextStyle(),
-                      border: OutlineInputBorder(
+                      border: const OutlineInputBorder(
                         borderSide: BorderSide(color: kGreenContainerColor),
                       ),
                     ),
@@ -668,7 +668,7 @@ class EditItemsScreen extends GetView<EditItemsController> {
                             decoration: InputDecoration(
                               labelText: item.attributes[index]['name'],
                               labelStyle: AppStyles.greenTextStyle(),
-                              border: OutlineInputBorder(
+                              border: const OutlineInputBorder(
                                 borderSide:
                                     BorderSide(color: kGreenContainerColor),
                               ),

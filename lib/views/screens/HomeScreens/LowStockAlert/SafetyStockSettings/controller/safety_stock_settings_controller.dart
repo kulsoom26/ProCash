@@ -6,8 +6,4 @@ class SafetyStockSettingsController extends GetxController {
   GlobalKey<ScaffoldState> scaffoldKeySafetyStockSettings = GlobalKey<ScaffoldState>();
   final switchController = ValueNotifier<bool>(false);
  
-  @override
-  void onInit() {
-    super.onInit();
-  }
 }

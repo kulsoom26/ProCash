@@ -18,16 +18,16 @@ class ProfileController extends GetxController {
   RxBool isUploading = false.obs;
 
   Future<void> getImageGallery() async {
-    final ImagePicker _picker = ImagePicker();
-    final XFile? image = await _picker.pickImage(source: ImageSource.gallery);
+    final ImagePicker picker = ImagePicker();
+    final XFile? image = await picker.pickImage(source: ImageSource.gallery);
     if (image != null) {
       await uploadImage(File(image.path));
     }
   }
 
   Future<void> getImageCamera() async {
-    final ImagePicker _picker = ImagePicker();
-    final XFile? image = await _picker.pickImage(source: ImageSource.camera);
+    final ImagePicker picker = ImagePicker();
+    final XFile? image = await picker.pickImage(source: ImageSource.camera);
     if (image != null) {
       await uploadImage(File(image.path));
     }

@@ -54,7 +54,7 @@ class TransactionHistoryScreen extends GetView<TransactionHistoryController> {
         scaffoldKey: controller.scaffoldKeyTransaction,
         body: Obx(() {
           if (controller.groupedTransactions.isEmpty) {
-            return Center(child: Text('No transactions available'));
+            return const Center(child: Text('No transactions available'));
           }
           return ListView.builder(
             itemCount: controller.groupedTransactions.length,
@@ -86,7 +86,7 @@ class TransactionHistoryScreen extends GetView<TransactionHistoryController> {
                   SizedBox(height: 20.h),
                   ListView.builder(
                     shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     itemCount: transactions?.length ?? 0,
                     itemBuilder: (context, index) {
                       final transaction = transactions![index];
@@ -178,8 +178,7 @@ class TransactionHistoryScreen extends GetView<TransactionHistoryController> {
 class TransactionTile extends StatelessWidget {
   final Stock transaction;
 
-  const TransactionTile({Key? key, required this.transaction})
-      : super(key: key);
+  const TransactionTile({super.key, required this.transaction});
 
   @override
   Widget build(BuildContext context) {

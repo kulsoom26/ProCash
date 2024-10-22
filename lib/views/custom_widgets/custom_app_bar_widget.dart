@@ -69,7 +69,7 @@ class CustomAppBar extends StatelessWidget {
                               color: kBlackTextColor,
                             )
                           : backIcon ?
-                          Icon(
+                          const Icon(
                               Icons.arrow_back_ios,
                               size: 25,
                               color: kBlackTextColor,

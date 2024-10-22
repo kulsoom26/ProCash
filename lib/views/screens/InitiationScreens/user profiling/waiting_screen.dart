@@ -150,7 +150,6 @@ class WaitingScreen extends StatelessWidget {
                       //   ),
                       // )
 
-                      ;
                     },
                   ),
                 ),

@@ -159,7 +159,7 @@ class RouteGenerator {
           binding: ScreenBindings()),
       GetPage(
           name: kItemsRoute,
-          page: () => ItemsScreen(),
+          page: () => const ItemsScreen(),
           binding: ScreenBindings()),
       GetPage(
           name: kEditItemsRoute,

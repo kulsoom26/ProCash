@@ -33,7 +33,7 @@ class ItemsController extends GetxController {
           .where('teamId', isEqualTo: teamId)
           .get();
       items.value = snapshot.docs
-          .map((doc) => Item.fromMap(doc.id, doc.data() as Map<String, dynamic>))
+          .map((doc) => Item.fromMap(doc.id, doc.data()))
           .toList();
     
     } catch (e) {

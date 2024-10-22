@@ -29,12 +29,12 @@ class DisplayFormatScreen extends GetView<SettingsController> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
+            SizedBox(
               height: 260.h,
               child: Obx(() {
                     return ListView.separated(
                       itemCount: controller.displayFormat.length,
-                      separatorBuilder: (context, index) => SizedBox(),
+                      separatorBuilder: (context, index) => const SizedBox(),
                       itemBuilder: (context, index) {
                         return Obx(
                           () => RadioListTile<String>(

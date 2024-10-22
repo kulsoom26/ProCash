@@ -52,12 +52,12 @@ class ManageRolesScreen extends GetView<SettingsController> {
                       style: AppStyles.blackTextStyle()
                           .copyWith(fontWeight: FontWeight.w500),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     GestureDetector(
                         onTap: () {
                           _showEditModal(context, 'Manager');
                         },
-                        child: Icon(
+                        child: const Icon(
                           Icons.keyboard_arrow_right,
                           color: kGreyButtonColor,
                           size: 25,
@@ -92,10 +92,10 @@ class ManageRolesScreen extends GetView<SettingsController> {
                       style: AppStyles.blackTextStyle()
                           .copyWith(fontWeight: FontWeight.w500),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     GestureDetector(
                         onTap: () {},
-                        child: Icon(
+                        child: const Icon(
                           Icons.keyboard_arrow_right,
                           color: kGreyButtonColor,
                           size: 25,
@@ -122,7 +122,7 @@ class ManageRolesScreen extends GetView<SettingsController> {
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.add,
                       color: kPrimaryColor,
                     ),
@@ -197,7 +197,7 @@ class ManageRolesScreen extends GetView<SettingsController> {
                   ),
                 ),
                 SizedBox(height: 10.h),
-                Container(
+                SizedBox(
                   width: Get.width,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -206,7 +206,7 @@ class ManageRolesScreen extends GetView<SettingsController> {
                       padding: EdgeInsets.symmetric(vertical: 15.h),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.r),
-                        side: BorderSide(color: Colors.black),
+                        side: const BorderSide(color: Colors.black),
                       ),
                     ),
                     onPressed: () {
@@ -268,7 +268,7 @@ class ManageRolesScreen extends GetView<SettingsController> {
                           padding: EdgeInsets.symmetric(vertical: 12.h),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.r),
-                            side: BorderSide(color: Colors.black),
+                            side: const BorderSide(color: Colors.black),
                           ),
                         ),
                         onPressed: () {

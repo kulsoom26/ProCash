@@ -25,11 +25,11 @@ class AdminRequestScreen extends GetView<AdminRequestController> {
         scaffoldKey: controller.scaffoldKeyAdminRequest,
         body: Obx(() {
           if (controller.isLoading.value) {
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(),
             );
           } else if (controller.requests.isEmpty) {
-            return Center(
+            return const Center(
               child: Text('No new requests'),
             );
           } else {
@@ -41,7 +41,7 @@ class AdminRequestScreen extends GetView<AdminRequestController> {
                   SizedBox(
                     height: 25.h,
                   ),
-                  Obx(() => controller.requests.length == 0 ? Center(child: Text('No new requests found!', style: AppStyles.blackTextStyle(),),): 
+                  Obx(() => controller.requests.isEmpty ? Center(child: Text('No new requests found!', style: AppStyles.blackTextStyle(),),): 
                   
                   
                   Column(

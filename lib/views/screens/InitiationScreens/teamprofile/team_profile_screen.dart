@@ -41,7 +41,7 @@ class TeamProfileScreen extends GetView<TeamProfileController> {
                 ),
               ),
               SizedBox(height: 20.h),
-              CustomProfileImagePicker(),
+              const CustomProfileImagePicker(),
               SizedBox(height: 30.h),
               CustomTextField(
                 controller: controller.teamname,
@@ -147,7 +147,7 @@ class _CustomProfileImagePickerState extends State<CustomProfileImagePicker> {
                   ),
                 ),
                 SizedBox(height: 10.h),
-                Container(
+                SizedBox(
                   width: Get.width,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -156,7 +156,7 @@ class _CustomProfileImagePickerState extends State<CustomProfileImagePicker> {
                       padding: EdgeInsets.symmetric(vertical: 15.h),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.r),
-                        side: BorderSide(color: Colors.black),
+                        side: const BorderSide(color: Colors.black),
                       ),
                     ),
                     onPressed: () {
@@ -181,7 +181,7 @@ class _CustomProfileImagePickerState extends State<CustomProfileImagePicker> {
     return Center(
       child: Obx(
         () => controller.isUploading.isTrue
-            ? CircularProgressIndicator(
+            ? const CircularProgressIndicator(
                 color: kPrimaryColor,
               )
             : controller.imagePath.value.isEmpty

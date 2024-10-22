@@ -5,7 +5,6 @@ import 'package:intl/intl.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:pro_cash_food/models/customers_model.dart';
 import 'package:pro_cash_food/models/suppliers_model.dart';
-import 'package:pro_cash_food/models/transfer_request.dart';
 
 import '../../../../../models/stock_request.dart';
 import '../../../TransferScreens/controller/transfer_screen_controller.dart';

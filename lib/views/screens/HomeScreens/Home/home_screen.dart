@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
-import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:pro_cash_food/utils/app_colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -11,7 +9,6 @@ import 'package:pro_cash_food/utils/app_strings.dart';
 import 'package:pro_cash_food/utils/app_styles.dart';
 import 'package:pro_cash_food/views/custom_widgets/customized_barcode.dart';
 import 'package:pro_cash_food/views/screens/HomeScreens/Home/controller/home_screen_controller.dart';
-import 'package:simple_barcode_scanner/simple_barcode_scanner.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

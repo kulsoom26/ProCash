@@ -34,8 +34,8 @@ class SupplierCustomerScreen extends GetView<SettingsController> {
             arguments: {'title': title == 'Supplier' ? 'Add Supplier' : 'Add Customer'},
           );
         },
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
+        child: const Padding(
+          padding: EdgeInsets.all(8.0),
           child: CircleAvatar(
             backgroundColor: kPrimaryColor,
             radius: 25,
@@ -63,19 +63,19 @@ class SupplierCustomerScreen extends GetView<SettingsController> {
               },
             ),
             SizedBox(height: 10.h),
-            Container(
+            SizedBox(
               width: Get.width,
               height: Get.height,
               child: Obx(() {
                 return ListView.separated(
                   shrinkWrap: true,
-                  physics: AlwaysScrollableScrollPhysics(),
+                  physics: const AlwaysScrollableScrollPhysics(),
                   itemCount: title == 'Supplier'
                       ? controller.suppliersList.length
                       : controller.customersList.length,
                   separatorBuilder: (context, index) => SizedBox(height: 10.h),
                   itemBuilder: (context, index) {
-                    var data;
+                    Object data;
                     if (title == 'Supplier') {
                       data = controller.suppliersList[index];
                     } else {
@@ -114,12 +114,12 @@ class SupplierCustomerScreen extends GetView<SettingsController> {
                                 style: AppStyles.blackTextStyle().copyWith(
                                     fontSize: 17.sp, fontWeight: FontWeight.bold),
                               ),
-                              Spacer(),
+                              const Spacer(),
                               GestureDetector(
                           onTap: () {
                             _showEditModal(context,data.id, data.name, title);
                           },
-                          child: Icon(
+                          child: const Icon(
                             Icons.keyboard_arrow_right,
                             color: kBlackTextColor,
                           ),
@@ -176,7 +176,7 @@ class SupplierCustomerScreen extends GetView<SettingsController> {
                   ),
                 ),
                 SizedBox(height: 10.h),
-                Container(
+                SizedBox(
                   width: Get.width,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -185,7 +185,7 @@ class SupplierCustomerScreen extends GetView<SettingsController> {
                       padding: EdgeInsets.symmetric(vertical: 15.h),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.r),
-                        side: BorderSide(color: Colors.black),
+                        side: const BorderSide(color: Colors.black),
                       ),
                     ),
                     onPressed: () {
@@ -248,7 +248,7 @@ class SupplierCustomerScreen extends GetView<SettingsController> {
                           padding: EdgeInsets.symmetric(vertical: 12.h),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.r),
-                            side: BorderSide(color: Colors.black),
+                            side: const BorderSide(color: Colors.black),
                           ),
                         ),
                         onPressed: () {
