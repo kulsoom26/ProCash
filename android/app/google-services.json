@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "369239701274",
+    "project_id": "pro-cash-e3f48",
+    "storage_bucket": "pro-cash-e3f48.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:369239701274:android:d0bffbb62ccd08e5429ea3",
+        "android_client_info": {
+          "package_name": "com.example.pro_cash_food"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "369239701274-0fgqlbc85ibtfjemll3vk7n68dbn2eov.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pro_cash_food",
+            "certificate_hash": "0d990030f5994d915da46bb16ec0b8ad812b62cc"
+          }
+        },
+        {
+          "client_id": "369239701274-4c8f42k12f4m2sljn13efeuug36q3d4g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdETIfwneYLze_iPv8yJ-k9UwlBO6veVQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "369239701274-4c8f42k12f4m2sljn13efeuug36q3d4g.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "369239701274-7rem0ks2d7inbq5oo2u89g0l6hp845na.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.proCashFood"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
